@@ -15,8 +15,17 @@
 
 	<br />
 	<br />
+	<br />
+	<br />
 
 	<div id="slider2" class="ui-slider"></div>
+
+	<br />
+	<br />
+	<br />
+	<br />
+
+	<div id="slider3" class="ui-slider tooltip"></div>
 
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/nouislider/distribute/jquery.nouislider.all.js"></script>
@@ -29,6 +38,7 @@
 				'max': 100
 			}
 		});
+
 		$("#slider2").noUiSlider({
 			start: [20, 80],
 			connect: true,
@@ -36,10 +46,24 @@
 				'min': 0,
 				'max': 100
 			}
-		}).Link('upper').to('-inline-<span class="max-val"></span>', function(value) {
+		}).Link('upper').to('-inline-<span class="value max-val"></span>', function(value) {
 			$(this).html(value);
 		})
-		.Link('lower').to('-inline-<span class="min-val"></span>', function(value) {
+		.Link('lower').to('-inline-<span class="value min-val"></span>', function(value) {
+			$(this).html(value);
+		});
+
+		$("#slider3").noUiSlider({
+			start: [300, 800],
+			connect: true,
+			range: {
+				'min': 200,
+				'max': 1100
+			}
+		}).Link('upper').to('-inline-<span class="value max-val"></span>', function(value) {
+			$(this).html(value);
+		})
+		.Link('lower').to('-inline-<span class="value min-val"></span>', function(value) {
 			$(this).html(value);
 		});
 	</script>
