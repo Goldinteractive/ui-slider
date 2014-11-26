@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<link rel="stylesheet" href="bower_components/nouislider/src/jquery.nouislider.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Slider</h1>
+		<a href="http://refreshless.com/nouislider/">No ui slider doc</a>
+
+		<br />
+		<br />
+
+		<div id="slider"></div>
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/nouislider/distribute/jquery.nouislider.all.js"></script>
+		<script>
+			$("#slider").noUiSlider({
+				start: [20, 80],
+				connect: true,
+				range: {
+					'min': 0,
+					'max': 100
+				}
+			});
+		</script>
+	</body>
+</html>
