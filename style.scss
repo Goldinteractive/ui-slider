@@ -1,11 +1,11 @@
 @import "compass";
 
 // Colors
-$slider-bg-color: #b2b2b2;
-$slider-range-color: black;
-$slider-value-text-color: black;
-$slider-tooltip-bg-color: black;
-$slider-tooltip-text-color: white;
+$slider-bg-color: #b2b2b2 !default;
+$slider-range-color: black !default;
+$slider-value-text-color: black !default;
+$slider-tooltip-bg-color: black !default;
+$slider-tooltip-text-color: white !default;
 
 // Size
 $slider-height: 3px;
