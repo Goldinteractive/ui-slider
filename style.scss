@@ -10,7 +10,7 @@ $slider-tooltip-text-color: white !default;
 // Size
 $slider-height: 3px;
 $slider-handle-size: 20px;
-$slider-font-size: 0.688em;
+$slider-font-size: 0.688rem;
 
 // Features
 
@@ -39,11 +39,11 @@ $slider-font-size: 0.688em;
 			border: 10px solid rgba(0,0,0, 0.2);
 			@include transform(translate(-10px,-10px));
 		}
-	}	
+	}
 	.noUi-handle:before, .noUi-handle:after {
 		display: none;
 	}
-	
+
 	.noUi-origin {
 		@include border-radius(0);
 	}
