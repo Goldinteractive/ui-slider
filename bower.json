@@ -13,7 +13,6 @@
     "tests"
   ],
   "dependencies": {
-    "nouislider": "~7.0.9",
-    "gi-ui-buttons": "master"
+    "nouislider": "~7.0.9"
   }
 }
