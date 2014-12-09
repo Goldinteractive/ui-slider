@@ -1,0 +1,119 @@
+@import "compass";
+
+// Colors
+$button-bg-primary: red !default;
+$button-text-primary: black !default;
+
+// Shaddow
+$button-shadow-x-offset: 1px !default;
+$button-shadow-y-offset: 2px !default;
+$button-shadow-blur: 1px !default;
+$button-shadow-size: 4px !default;
+$button-shadow-color: black !default;
+$button-shadow-color-opacity: 0.4 !default;
+
+// Padding 
+$button-default-padding: 0.5em 1.2em !default;
+
+$button-small-padding: 0.2em 0.8em !default;
+$button-large-padding: 1em 3.5em !default;
+$button-huge-padding: 1.5em 4em !default;
+
+//Fontsize
+$button-default-font-size:  0.813rem !default;
+
+$button-small-font-size: 0.6rem !default;
+$button-large-font-size: 1.5rem  !default;
+$button-huge-font-size: 2rem  !default;
+
+// Features
+$button-border-radius: 5px;
+
+//Border
+$button-border-color: black;
+$button-border-width: 1px;
+
+.ui-btn {
+	padding: $button-default-padding;
+	border-radius: 0;
+	font-size: $button-default-font-size;
+	display: inline-block;
+	outline: none;
+	border: none;
+	white-space: nowrap;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none !important;
+	@include box-shadow ($button-shadow-x-offset $button-shadow-y-offset $button-shadow-size $button-shadow-blur rgba($button-shadow-color, $button-shadow-color-opacity));
+
+	&:hover {
+		
+	}
+	&.hoverable {
+		
+	}
+	&.bordered {
+		border: $button-border-width solid $button-border-color;
+	}
+	&.primary {
+		background: $button-bg-primary;
+		color: $button-text-primary;
+	}
+	&.no-shadow {
+		@include box-shadow (none);
+	}
+	&.rounded-corners {
+		@include border-radius($button-border-radius);
+	}
+	&.white {
+		color: black;
+		background: white;
+	}
+	&.black {
+		color: white;
+		background: black;
+	}
+	&.circle {
+		padding: 0 !important;
+		width: $button-default-font-size;
+		height: $button-default-font-size;
+		@include border-radius(100%);
+		&.small {
+			width: $button-small-font-size;
+			height: $button-small-font-size;
+		}
+		&.large {
+			width: $button-large-font-size;
+			height: $button-large-font-size;
+		}
+		&.huge {
+			width: $button-huge-font-size;
+			height: $button-huge-font-size;
+		}
+	}
+	&.uppercase {
+		text-transform: uppercase;
+	}
+	&.small {
+		font-size:$button-small-font-size;
+		padding: $button-small-padding;
+	}
+	&.large {
+		font-size:$button-large-font-size;
+		padding: $button-large-padding;
+	}
+	&.huge {
+		font-size:$button-huge-font-size;
+		padding: $button-huge-padding;
+	}
+	&.disabled {
+		cursor: default !important;
+		@include opacity (0.4);
+	}
+	&.margin-right {
+		margin-right: 1em;
+	}
+	&.margin-left {
+		margin-left: 1em;
+	}
+}
