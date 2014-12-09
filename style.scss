@@ -8,9 +8,9 @@ $slider-tooltip-bg-color: black !default;
 $slider-tooltip-text-color: white !default;
 
 // Size
-$slider-height: 3px;
-$slider-handle-size: 20px;
-$slider-font-size: 0.688rem;
+$slider-height: 3px !default;
+$slider-handle-size: 20px !default;
+$slider-font-size: 0.688rem !default;
 
 // Features
 
@@ -29,15 +29,13 @@ $slider-font-size: 0.688rem;
 		height: $slider-handle-size;
 		top: -9px;
 		position: relative;
-		border: 0px solid rgba(0,0,0, 0.2);
-		box-sizing: padding-box;
-		@include transform(translate(0,0));
+		border: none;
+		cursor: pointer;
 		@include box-shadow (1px 1px 2px rgba(black, 0.2));
 		@include border-radius(100%);
-		@include transition(border 0.2s, transform 0.2s);
+		@include transition(box-shadow 0.2s, transform 0.3s);
 		&:hover, &:focus, &:active, &.noUi-active {
-			border: 10px solid rgba(0,0,0, 0.2);
-			@include transform(translate(-10px,-10px));
+			@include box-shadow(1px 1px 2px rgba(black, 0.2), 0 0 0 10px rgba(black, 0.06));
 		}
 	}
 	.noUi-handle:before, .noUi-handle:after {
