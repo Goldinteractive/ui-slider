@@ -13,7 +13,11 @@
     "tests"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "nouislider": "~7.0.9",
     "jquery": "~2.1.1"
+=======
+    "nouislider": "~7.0.9"
+>>>>>>> master
   }
 }
