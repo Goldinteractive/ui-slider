@@ -27,7 +27,8 @@ $slider-font-size: 0.688rem !default;
 	.noUi-handle {
 		width: $slider-handle-size;
 		height: $slider-handle-size;
-		top: -9px;
+		left: -$slider-handle-size / 2;
+		top: -$slider-handle-size / 2;
 		position: relative;
 		border: none;
 		cursor: pointer;
