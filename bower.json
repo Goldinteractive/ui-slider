@@ -13,11 +13,7 @@
     "tests"
   ],
   "dependencies": {
-<<<<<<< HEAD
     "nouislider": "~7.0.9",
-    "jquery": "~2.1.1"
-=======
-    "nouislider": "~7.0.9"
->>>>>>> master
+    "gi-scss-mixins": "~0.2.0"
   }
 }
