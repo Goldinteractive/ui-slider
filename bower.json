@@ -13,6 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "nouislider": "~7.0.9"
+    "nouislider": "~7.0.9",
+    "gi-scss-mixins": "~0.2.0"
   }
 }
