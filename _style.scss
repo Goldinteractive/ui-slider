@@ -8,6 +8,7 @@ $slider-tooltip-text-color: white !default;
 // Size
 $slider-height: 3px !default;
 $slider-handle-size: 20px !default;
+$slider-handle-size-mobile: 35px !default;
 $slider-font-size: 0.688rem !default;
 
 // Features
@@ -21,6 +22,10 @@ $slider-font-size: 0.688rem !default;
 		border: none;
 		box-shadow: none;
 		background: $slider-bg-color;
+
+		@include respond-to(mobile) {
+
+		}
 	}
 	.noUi-handle {
 		width: $slider-handle-size;
@@ -35,6 +40,12 @@ $slider-font-size: 0.688rem !default;
 		@include transition(box-shadow 0.2s, transform 0.3s);
 		&:hover, &:focus, &:active, &.noUi-active {
 			@include box-shadow(1px 1px 2px rgba(black, 0.2), 0 0 0 10px rgba(black, 0.06));
+		}
+		@include respond-to(mobile) {
+			width: $slider-handle-size-mobile;
+			height: $slider-handle-size-mobile;
+			left: -$slider-handle-size-mobile / 2;
+			top: -$slider-handle-size-mobile / 2;
 		}
 	}
 	.noUi-handle:before, .noUi-handle:after {
@@ -61,6 +72,9 @@ $slider-font-size: 0.688rem !default;
 		left: 50%;
 		margin-left: -2em;
 		text-align: center;
+		@include respond-to(mobile) {
+			top: -22px;
+		}
 	}
 	&.tooltip {
 		.value {
