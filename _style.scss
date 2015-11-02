@@ -8,6 +8,7 @@ $slider-tooltip-text-color: white !default;
 // Size
 $slider-height: 3px !default;
 $slider-handle-size: 20px !default;
+$slider-handle-size-mobile: 35px !default;
 $slider-font-size: 0.688rem !default;
 
 // Features
@@ -16,12 +17,18 @@ $slider-font-size: 0.688rem !default;
 	&.noUi-horizontal {
 		height: $slider-height;
 	}
+
 	&.noUi-target {
 		border-radius: 0;
 		border: none;
 		box-shadow: none;
 		background: $slider-bg-color;
+
+		@include respond-to(mobile) {
+
+		}
 	}
+
 	.noUi-handle {
 		width: $slider-handle-size;
 		height: $slider-handle-size;
@@ -30,28 +37,39 @@ $slider-font-size: 0.688rem !default;
 		position: relative;
 		border: none;
 		cursor: pointer;
-		@include box-shadow (1px 1px 2px rgba(black, 0.2));
-		@include border-radius(100%);
-		@include transition(box-shadow 0.2s, transform 0.3s);
+		box-shadow: 1px 1px 2px rgba(black, 0.2);
+		border-radius: 100%;
+		transition: box-shadow 0.2s, transform 0.3s;
+
 		&:hover, &:focus, &:active, &.noUi-active {
-			@include box-shadow(1px 1px 2px rgba(black, 0.2), 0 0 0 10px rgba(black, 0.06));
+			box-shadow: 1px 1px 2px rgba(black, 0.2), 0 0 0 10px rgba(black, 0.06);
+		}
+		@include respond-to(mobile) {
+			width: $slider-handle-size-mobile;
+			height: $slider-handle-size-mobile;
+			left: -$slider-handle-size-mobile / 2;
+			top: -$slider-handle-size-mobile / 2;
 		}
 	}
+
 	.noUi-handle:before, .noUi-handle:after {
 		display: none;
 	}
 
 	.noUi-origin {
-		@include border-radius(0);
+		border-radius: 0;
 	}
+
 	.noUi-connect {
 		box-shadow: none;
 		background: $slider-range-color;
 	}
+
 	.noUi-background {
 		box-shadow: none;
 		background: $slider-bg-color;
 	}
+
 	.value {
 		font-size: $slider-font-size;
 		color: $slider-value-text-color;
@@ -61,14 +79,19 @@ $slider-font-size: 0.688rem !default;
 		left: 50%;
 		margin-left: -2em;
 		text-align: center;
+		@include respond-to(mobile) {
+			top: -22px;
+		}
 	}
+
 	&.tooltip {
 		.value {
 			background: $slider-tooltip-bg-color;
 			color: $slider-tooltip-text-color;
 			padding: 0.3em 0.5em;
 			top: -35px;
-			@include box-shadow (2px 3px 6px rgba(black, 0.2));
+			box-shadow: 2px 3px 6px rgba(black, 0.2);
+
 			&:after {
 				content: "";
 				position: absolute;
